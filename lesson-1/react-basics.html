@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const button = <button>Tap Me</button>;
+      const paragraph = <p>Let's learn React!</p>;
+      const div = (
+        <div>
+          <button>Tap Me</button>
+          <p>Let's learn React in {2000 + 26}!</p>
+        </div>
+      );
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
