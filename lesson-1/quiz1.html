@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple React - Quiz 1</title>
+  </head>
+  <body>
+    <!-- Create a new HTML file with React-->
+    <!-- Create a button that says "Good Job"-->
+    <!-- Display a paragraph with the text "My name is [Name]." Use your name-->
+    <!-- Create an item with a name, price, and button-->
+    <!-- Create a shipping cost variable-->
+    <!-- Create a total variable that combines the price and shipping-->
+    <!-- Import some external js and use it to display the current date-->
+    <!-- Import some external js and use it to display the current time-->
+    <div class="js-container"></div>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+    <script>
+      console.log(dayjs().format("MMMM D"));
+    </script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const name = "Magic Dodson";
+      const product = "Darth Vader T-Shirt";
+      const price = 40;
+      const shipping = 5;
+      const total = price + shipping;
+      const button = "Add To Cart";
+      const buttonTwo = "Place Your Order";
+      const date = dayjs().format("MMMM D");
+      const time = dayjs().format("HH:mm:ss");
+      const div = (
+        <div>
+          <button>Good Job!</button>
+          <p>What's your name? My name is {name}.</p>
+          <p>item: {product}</p>
+          <p>price: ${price}</p>
+          <button>{button}</button>
+          <p>product cost: ${price}</p>
+          <p>shipping cost: ${shipping}</p>
+          <p>total: {total}</p>
+          <button>{buttonTwo}</button>
+          <p>Today is {date}</p>
+          <p id="clock">Current time: {time}</p>
+        </div>
+      );
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(div);
+      setInterval(() => {
+        document.getElementById("clock").textContent = dayjs().format("HH:mm:ss");
+      }, 1000);
+    </script>
+  </body>
+</html>
