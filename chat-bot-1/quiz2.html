@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Quiz 2 - Components and Prompts</title>
+  </head>
+  <body>
+    <!-- Create a simple React app. -->
+    <!-- Give it 2 components. -->
+    <!-- Each component will have 1 prop. -->
+    <!-- Use each component inside the App function. -->
+    <!-- Style with basic CSS and make fully responsive. -->
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const HeadSection = ({ title }) => {
+        return (
+          <>
+            <img src="./images/parliament.webp" alt="Faded group photo of the funk band Parliament." />
+            <div>
+              <h1>{title}</h1>
+              <p className="author">
+                By Sir Nose
+                <img src="./images/sir-nose.webp" alt="Sir Nose profile image." />
+              </p>
+              <p className="date">August 02, 2026</p>
+            </div>
+          </>
+        );
+      };
+
+      const ArticleBody = ({ click }) => {
+        return (
+          <main>
+            <h2 className="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ratione perferendis, repellendus quisquam deserunt sed numquam amet, ea illum quos ex odio possimus minima! Accusamus, repellendus quia aliquam aut eius reprehenderit autem atque voluptatibus sequi sapiente unde dolore corrupti doloribus hic error voluptate sint expedita fugit inventore quos, dolorum impedit?</h2>
+            <p className="article-section">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut corrupti soluta eum ipsa! Adipisci consequuntur laudantium quas exercitationem quae mollitia, quibusdam corporis expedita ullam itaque, ab qui earum, sit placeat? <br />
+              <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, facilis expedita debitis facere autem fugiat dolorum! At saepe quos deleniti quidem, qui doloremque quasi culpa delectus totam iste quisquam dicta obcaecati nam nulla quas maxime nihil! Molestias aliquam nemo saepe beatae autem recusandae reprehenderit ad excepturi quod dolores corporis, cum fugit quasi in accusamus amet id, ducimus, molestiae maxime tempora!
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A temporibus placeat ut, repudiandae dicta vitae sunt velit nihil quasi quia aliquid earum numquam, autem quas nam quae qui impedit similique? Deserunt nam esse, soluta beatae voluptates dolore! Dolorum, quis? Eos quisquam architecto veniam magnam itaque possimus amet vitae a aut incidunt expedita quam tempora, praesentium culpa soluta quas quo magni mollitia sunt consequuntur? Enim eaque dolore vel, voluptas temporibus excepturi eligendi sunt commodi illum, voluptate at consectetur ullam voluptatibus exercitationem. <br />
+              <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo debitis mollitia vel dolor architecto sint qui laborum iusto voluptates sapiente impedit magni excepturi voluptatem ab omnis, in quaerat incidunt id! Quae officiis magnam mollitia quaerat eligendi consequatur, saepe tempora, adipisci dolorem assumenda, ullam similique aspernatur.
+            </p>
+            <div className="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/c56CPc6n0AY?si=lohUhhk3ihTg5nUw" title="Parliament-Funkadelic - Cosmic Slop Live 1978 | Capitol Theatre Full Performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </div>
+
+            <p className="article-section">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, facilis expedita debitis facere autem fugiat dolorum! At saepe quos deleniti quidem, qui doloremque quasi culpa delectus totam iste quisquam dicta obcaecati nam nulla quas maxime nihil! Molestias aliquam nemo saepe beatae autem recusandae reprehenderit ad excepturi quod dolores corporis, cum fugit quasi in accusamus amet id, ducimus, molestiae maxime tempora!
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A temporibus placeat ut, repudiandae dicta vitae sunt velit nihil quasi quia aliquid earum numquam, autem quas nam quae qui impedit similique? Deserunt nam esse, soluta beatae voluptates dolore! Dolorum, quis? Eos quisquam architecto veniam magnam itaque possimus amet vitae a aut incidunt expedita quam tempora, praesentium culpa soluta quas quo magni mollitia sunt consequuntur? Enim eaque dolore vel, voluptas temporibus excepturi eligendi sunt commodi illum, voluptate at consectetur ullam voluptatibus exercitationem. <br />
+              <br />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo debitis mollitia vel dolor architecto sint qui laborum iusto voluptates sapiente impedit magni excepturi voluptatem ab omnis, in quaerat incidunt id! Quae officiis magnam mollitia quaerat eligendi consequatur, saepe tempora, adipisci dolorem assumenda, ullam similique aspernatur.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et corrupti praesentium dolorum voluptatum fugiat nesciunt optio corporis, saepe totam magni. Corrupti sunt, corporis incidunt saepe nisi, vero est soluta quis architecto alias modi repellendus nostrum assumenda autem, dolorum maxime id nesciunt reprehenderit eos qui eligendi hic inventore! Magni, ut maiores nostrum non error dolorum doloribus repudiandae maxime at libero numquam recusandae laboriosam aliquam eum officia, veritatis porro? Voluptatum fuga veritatis ipsum, ullam eveniet minus aliquam autem. Optio impedit recusandae exercitationem voluptas nam repellendus vero accusamus.
+            </p>
+            <h3>{click}</h3>
+            <p className="book-types">Available in hardback, ebook, audio, and Kindle.</p>
+            <button className="btn">Get The Book</button>
+          </main>
+        );
+      };
+      const App = () => {
+        return (
+          <div className="container">
+            <HeadSection title="The dark side of P-Funk" />
+            <ArticleBody click="Click below to get my tell all book." />
+          </div>
+        );
+      };
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

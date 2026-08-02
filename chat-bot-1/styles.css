@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 4rem 8rem;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: Changa One;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-top: 12px;
+}
+
+p {
+  font-family: Roboto;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.author img {
+  max-width: 55px;
+  width: 100%;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.date {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 26px;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.article-section {
+  margin-bottom: 20px;
+}
+
+.video-container {
+  width: 70%;
+  margin: 2rem auto; /* centers the container */
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-container p {
+  color: #616060;
+}
+
+.btn {
+  color: #fff;
+  background: #1d036a;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #525151;
+}
+
+.book-types {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+}
