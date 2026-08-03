@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 5rem 8rem;
+}
+
+.frieza-image {
+  display: block;
+  width: 350px;
+  height: auto;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: Oxanium;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 4rem;
+}
+
+/* Main grid container - Flexbox layout */
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Individual item - 3 columns on desktop */
+.form-item {
+  flex: 0 0 calc(33.333% - 1rem); /* 3 columns on desktop */
+  max-width: calc(33.333% - 1rem);
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+/* Card container - full height */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.form-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.form-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  color: #1e048f;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  font-family: Oxanium;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Description */
+.form-desc {
+  text-align: left;
+  font-family: "Exo 2";
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  margin: 0.5rem;
+}
+
+.btn {
+  background: #86028a;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Exo 2";
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 0;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #4c4b4c;
+}
+
+.power-level-display {
+  background: #f50303;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  /* 2 columns on tablets */
+  .container {
+    margin: 2.5rem 4rem;
+  }
+  .form-item {
+    flex: 0 0 calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1 column on mobile */
+  .form-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-grid {
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
